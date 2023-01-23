@@ -35,9 +35,6 @@ function updateGradeDorama(dorama : updateDorama) : string{
     return `O dorama recebeu nota ${grade}.`
 }
 
-
-
-
 export {
     insertDorama, selectDoramas, dropsDorama, updateGradeDorama
 }
