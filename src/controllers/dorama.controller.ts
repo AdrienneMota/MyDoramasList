@@ -8,6 +8,8 @@ export async function postDorama(req: Request, res: Response) : Promise<void>  {
     const dorama = res.locals.dorama as NewDorama
     try {
         insertDorama(dorama)    
+    
+        
         res.status(201).send(`Dorama ${dorama.name} na lista.`) 
     } catch (error) {
         console.log(error)
