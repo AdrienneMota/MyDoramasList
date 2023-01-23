@@ -3,8 +3,8 @@ It is a simple watched Doramas manager
 
 
 **#POST: /dorama**
-##Body: { "name": "Nosso verão", "overview": "descrição legal",  "grade": 5 }
-##A nota deve estar entre 1 e 5. 
+- Body: { "name": "Nosso verão", "overview": "descrição legal",  "grade": 5 }
+- A nota deve estar entre 1 e 5. 
 
 **#GET: /dorama**
 #Retorna a lista de doramas inseridos.
