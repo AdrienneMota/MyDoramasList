@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { postDorama } from "../controllers/dorama.controller.js";
+import { getDoramas, postDorama } from "../controllers/dorama.controller.js";
+import { validateSchema } from "../middleware/dorama.middleware.js";
 
 const route = Router()
 
-route.post('/dorama', postDorama)
+route.post('/dorama', validateSchema, postDorama)
+route.get('/dorama', getDoramas)
 
 export default route
