@@ -1,9 +1,9 @@
 import doramaSchema from "../schemas/dorama.schema.js";
 import { Request, Response, NextFunction } from "express";
-import { Dorama } from "../protocols/doramas.protocol.js";
+import { NewDorama } from "../protocols/doramas.protocol.js";
 
 export function validateSchema(req: Request, res: Response, next: NextFunction) : Promise <void>{
-    const dorama = req.body as Dorama
+    const dorama = req.body as NewDorama
 
     const { error } = doramaSchema.validate( dorama, {abortEarly: false})
     if(error){
